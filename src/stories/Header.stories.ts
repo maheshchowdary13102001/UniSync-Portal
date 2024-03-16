@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { UiHeaderComponent } from '../app/Shared/ui-header/ui-header.component';
-
+import { UiHeaderComponent } from '../app/Components/ui-header/ui-header.component';
 const meta: Meta<UiHeaderComponent> = {
     component: UiHeaderComponent
 }

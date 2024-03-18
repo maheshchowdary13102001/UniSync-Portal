@@ -1,3 +1,19 @@
-<div>
-    <p>ui-header works!</p>
-</div>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">
+            <img [src]="logoPath" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            UniSync
+        </a>
+        <div class="collapse navbar-collapse">
+            <div class="navbar-nav" *ngFor="let item of headerList" [ngClass]="{'dropdown-btn':item.dropdownItems}">
+                <a class="nav-link" [attr.href]="item.link">
+                    {{item.title}}
+                </a>
+                <div *ngIf="item.dropdownItems" class="dropdown_menu">
+                    <a class="dropdown-item" *ngFor="let dropdownItem of item.dropdownItems"
+                        [attr.href]="dropdownItem.link">{{dropdownItem.title}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
